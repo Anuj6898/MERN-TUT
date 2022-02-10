@@ -1,3 +1,4 @@
+                // Backend //
 Inside root dir
         mkdir backend touch server.js
         touch .gitigore node_modules .env
@@ -26,10 +27,7 @@ For Database
         mkdir config touch db
 Create Models for Database
         in backend mkdir models
-        
 
-
-In server.js
-
+                // Backend //
 
 

@@ -20,6 +20,15 @@ Inside backend
         mkdir middleware touch errorMiddleware
 For Database
         npm i express-async-handler
+        connect mongoatlas cluster to mongocompass
+        remove <password> and add your own password ck%4069 change test to db name
+        in .env make a variable with the given url at atlas for application change myfirstdb to db name
+        mkdir config touch db
+Create Models for Database
+        in backend mkdir models
+        
+
+
 In server.js
 
 

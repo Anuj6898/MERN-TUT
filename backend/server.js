@@ -2,9 +2,15 @@
 // Import installed packages 
 const express = require("express")
 const dotenv = require("dotenv").config({path: './.env'}).parsed
+const colors = require("colors")
+
+// Connecting to Mongo DB
+const connectDB = require("./config/db")
+connectDB()
 
 // Error Handler
 const {errorHandler} = require("./middlware/errorMIddleware")
+const { connect } = require("mongoose")
 
 // Import port from .env file if not found use 5000
 const port = process.env.PORT || 5000

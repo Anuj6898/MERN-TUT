@@ -1,6 +1,7 @@
 const express = require("express")
 const router = express.Router()
 const {getGoals,setGoals,putGoals,deleteGoals} = require("../controller/goalController.js")
+const {protect} = require("../middlware/authMiddleware")
 
 // Send Request using ThunderClient at https://localhost:5000/api/goals
 // To listen to GET request
@@ -17,13 +18,14 @@ const {getGoals,setGoals,putGoals,deleteGoals} = require("../controller/goalCont
 // Set/Create a Goal for a POST request
 //      router.post('/',setGoals)
 // Shorter verson of the code above
-router.route('/').get(getGoals).post(setGoals)
+router.route('/').get(protect,getGoals).post(protect,setGoals)
 
 // To update goal using PUT which requires an id:
         // router.put('/:id',putGoals)
 // To delete goal using delete which also requires an id
         // router.delete('/:id',deleteGoals)
 // Shorter version of the code above
-router.route('/:id').delete(deleteGoals).put(putGoals)
+router.route('/:id').delete(protect,deleteGoals).put(protect,putGoals)
+
 
 module.exports = router

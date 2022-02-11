@@ -43,8 +43,12 @@
 -    mkdir config touch db
 > Create Models for Database
 -    in backend mkdir models
+    - user model for auth(name/password/email)
+    - 
 
-
-
+> JWT(Json Web Tokens) Authentication
+- npm i jsonwebtoken
+- npm i bcryptjs
+- in middleware touch authMiddleware 
 
 

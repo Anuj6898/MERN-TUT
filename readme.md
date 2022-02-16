@@ -51,4 +51,11 @@
 - npm i bcryptjs
 - in middleware touch authMiddleware 
 
-
+    // Frontend //
+>For React
+    - npx create-react-app frontend -template redux
+    - In package.json of backend add client:"npm start --prefix frontend"
+    - In root terminal npm run client to start react app
+    - npm i react-router-dom in frontend
+    - mkdir pages for login/register/dashboard
+    - mkdir components header/
